@@ -11,6 +11,7 @@
 <!-- Add Swiper JS -->
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
+
 </head>
 <body>
     <header>
@@ -26,13 +27,13 @@
                 <!-- Swiper Wrapper -->
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <img src="tshirt1.jpg" alt="Product Image 1">
+                        <img class="product-image"src="tshirt1.jpg" alt="Product Image 1">
                     </div>
                     <div class="swiper-slide">
-                        <img src="tshirt2.jpg" alt="Product Image 2">
+                        <img class="product-image" src="tshirt2.jpg" alt="Product Image 2">
                     </div>
                     <div class="swiper-slide">
-                        <img src="tshirt3.jpg" alt="Product Image 3">
+                        <img class="product-image" src="tshirt3.jpg" alt="Product Image 3">
                     </div>
                 </div>
     
@@ -86,6 +87,12 @@
         <p>&copy; 2024 CoolStuff. All Rights Reserved.</p>
     </footer>
 
+    <!-- Include medium-zoom JS
+    <script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js"></script>
+    <script>
+        // Initialize zoom for all product images
+        mediumZoom('.product-image');
+    </script> -->
     
 
     <script src="product1.js"></script>
