@@ -41,3 +41,8 @@ document.querySelector('.add-to-cart-btn').addEventListener('click', () => {
                 window.location.href = 'cart.html'; // Navigate to the cart page
             };
         });
+
+        document.addEventListener("DOMContentLoaded", function() {
+            // Apply zoom effect to product images
+            mediumZoom('.product-image');
+        });
