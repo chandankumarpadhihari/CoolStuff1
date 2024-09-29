@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Responsive Sign In Page - CoolStuffs</title>
+  <link rel="stylesheet" href="login.css">
+</head>
+<body>
+
+  <div class="login-container">
+    <div class="login-form">
+      <div class="logo">
+        <img src="logo.png" alt="CoolStuffs Logo">
+      </div>
+      
+      <h2>Sign In</h2>
+      <form id="loginForm" onsubmit="return validateForm()">
+        <div class="input-group">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" placeholder="Enter username" required maxlength="20">
+            <small id="usernameError" class="error-message" style="display:none;">Username must be between 3 and 20 characters and can only contain letters and numbers.</small>
+        </div>
+        <div class="input-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" placeholder="Enter password" required>
+        </div>
+        
+        <!-- Remember Me and Forgot Password on the same line -->
+        <div class="options-row">
+          <div class="remember-me">
+            <input type="checkbox" id="rememberMe" name="rememberMe">
+            <label for="rememberMe">Remember Me</label>
+          </div>
+          <div class="forgot-password">
+            <a href="#" id="forgotPasswordLink">Forgot Password?</a>
+          </div>
+        </div>
+        
+        <button type="submit">Login</button>
+      </form>
+      
+      <p id="errorMessage" class="error-message"></p>
+
+      <!-- Sign Up Link outside the form -->
+      <div class="sign-up">
+        <p>Don't have an account? <a href="index.html">Sign Up</a></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="login.js"></script>
+</body>
+</html>
