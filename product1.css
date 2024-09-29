@@ -1,0 +1,243 @@
+/* Reset and Box-Sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: rgb(43, 43, 43);
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    flex: 1; /* Allow logo section to take space */
+    display: flex;
+    justify-content: center; /* Center the logo */
+}
+
+.logo img {
+    height: 150px; /* Adjust logo size */
+}
+
+nav {
+    flex: 1; /* Allow nav section to take space */
+    display: flex;
+    justify-content: flex-end; /* Align navigation to the right */
+}
+
+/* Ensure the body takes up the full height of the viewport */
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Make the main content grow to fill the remaining space */
+main {
+    flex: 1;
+    padding: 20px;
+}
+
+
+/* Container to prevent unwanted overflow */
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+/* Swiper Styling */
+.swiper-container {
+    width: 100%;
+    height: auto;
+    overflow: hidden; /* Ensure no overflow for swiper container */
+}
+
+.swiper-slide img {
+    width: 100%; /* Make sure the images fit the container width */
+    border-radius: 8px;
+}
+
+/* Ensure the Swiper container holds the pagination near the images */
+.swiper-container {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    position: relative; /* This makes sure child elements like pagination are positioned relative to the Swiper container */
+}
+
+/* Adjust the pagination position */
+.swiper-pagination {
+    position: absolute;
+    bottom: 10px; /* Adjust this value to bring it closer to the images */
+    left: 50%;
+    transform: translateX(-50%); /* Center the pagination horizontally */
+    z-index: 10; /* Ensure it appears above the images */
+}
+
+/* Optional: Style the pagination bullets */
+.swiper-pagination-bullet {
+    background-color: #fff; /* White bullets */
+    opacity: 0.7; /* Slightly transparent */
+    width: 12px;
+    height: 12px;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #4CAF50; /* Active bullet color */
+    opacity: 1; /* Full opacity for active bullet */
+}
+
+/* Style for product details */
+.product-details {
+    padding: 20px;
+}
+
+.name, .price, .size-selection {
+    text-align: left; /* Align text to the left */
+    margin: 0; /* Remove default margin */
+}
+
+
+.size-selection {
+    margin: 10px 0;
+}
+
+.size-selection label {
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.size-selection select {
+    padding: 5px;
+    font-size: 16px;
+}
+
+/* Description Part Styles */
+.description, .wtb {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping */
+    margin: 15px 0; /* Add margin around description */
+}
+
+.desc-part, .wb {
+    box-sizing: border-box; /* Include padding and border in width */
+    padding: 10px; /* Padding for better spacing */
+    background-color: #f9f9f9; /* Light background for visibility */
+    margin-bottom: 10px; /* Space between rows */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.wb{
+    font-size: 13px;
+    text-align: center;
+    border: yellow 1px solid;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 600px) {
+    .desc-part {
+        width: 50%; /* Stack description parts on small screens */
+    }
+
+    .wb{
+        width: 33%;
+    }
+}
+
+/* Add to Cart Button */
+.add-to-cart-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.1s;
+    margin-top: 10px;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #003cff;
+}
+
+
+/* Make sure all buttons and text are responsive */
+button {
+    width: 100%;
+    max-width: 300px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+/* Product details */
+.product-details {
+    padding: 15px;
+    text-align: center;
+    word-wrap: break-word; /* Make sure text wraps in smaller screens */
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    /* Ensures footer stays at the bottom */
+    position: relative;
+    width: 100%;
+}
+
+/* Responsive footer fix */
+@media (max-width: 600px) {
+    footer {
+        padding: 15px;
+    }
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .product-page {
+        flex-direction: column;
+        align-items: center;
+        padding: 0 10px;
+    }
+
+    .swiper-container {
+        max-width: 100%;
+    }
+
+    .product-details {
+        padding: 10px;
+    }
+}
+
+/* Additional media query for smaller screens */
+@media screen and (max-width: 480px) {
+    .product-details {
+        padding: 5px;
+    }
+
+    /* Ensure text and buttons don't overflow */
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .price {
+        font-size: 1.2rem;
+    }
+
+    button {
+        font-size: 14px;
+    }
+}
