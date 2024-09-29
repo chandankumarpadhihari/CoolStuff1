@@ -97,6 +97,32 @@ main {
     opacity: 1; /* Full opacity for active bullet */
 }
 
+/* Product Image Styling */
+.product-image {
+    width: 100%;
+    transition: transform 0.3s ease-in-out; /* Smooth zoom transition */
+}
+
+/* Hover Zoom Effect (for desktop) */
+.product-image:hover {
+    transform: scale(1.5); /* Zoom in on hover */
+}
+
+/* Responsive Fix for Mobile */
+@media (max-width: 600px) {
+    .product-image {
+        transition: none; /* Remove hover effect on mobile */
+    }
+}
+
+/* Ensure the swiper pagination is close to the images */
+.swiper-pagination {
+    bottom: 10px;
+    text-align: center;
+}
+
+
+
 /* Style for product details */
 .product-details {
     padding: 20px;
